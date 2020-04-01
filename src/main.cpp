@@ -1,6 +1,6 @@
 #include "Arduino.h"
 #include "MIDIUSB.h"
-#include "pitchToNote.h"
+#include <pitchToNote.h>
 #include "stdlib.h"
 #define NUM_BUTTONS  5
 
@@ -41,7 +41,7 @@ void setup() {
 
 void loop() {
   readButtons();
-  readIntensity();
+  //readIntensity();
   playNotes();
 }
 
@@ -97,8 +97,8 @@ void playNotes()
       }
     }
   }
-  pitchBendChange(0x0, intensityA);
-  pitchBendChange(0x1, intensityB);
+  //pitchBendChange(0x0, intensityA);
+  //pitchBendChange(0x1, intensityB);
 }
 // bitRead(pressedButtons, NUM_BUTTONS)
 
